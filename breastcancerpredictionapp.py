@@ -111,11 +111,6 @@ if model is not None and scaler is not None:
 else:
     st.warning("⚠️ Cannot load model or scaler files.")
 
-# Debug information (optional - remove in production)
-if st.checkbox("Show Debug Info"):
-    if model is not None:
-        st.write(f"**Model type:** {type(model).__name__}")
-    if scaler is not None:
-        st.write(f"**Scaler type:** {type(scaler).__name__}")
-        st.write(f"**Expected features:** {len(scaler.mean_)} features")
-        st.write(f"**Scaler mean (first 5):** {scaler.mean_[:5]}")
+# Add footer
+st.markdown("---")
+st.markdown("⚠️ **Disclaimer**: This tool is for educational purposes only and should not be used as a substitute for professional medical advice.")
